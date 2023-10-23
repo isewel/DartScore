@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dartspill Skåringsapp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Dartspill Skåringsapp</h1>
+        <p>Velg et spill for å starte!</p>
+
+        <div class="games">
+            <button onclick="selectGame('501'); openModal('modal-501')">501</button>
+            <button onclick="selectGame('301'); openModal('modal-301')">301</button>
+            <button onclick="selectGame('Around the clock'); openModal('modal-around-the-clock')">Around the clock</button>
+        </div>
+
+        <div id="playerInput" class="hidden">
+            <input type="text" id="playerName" placeholder="Spillerens navn">
+            <button onclick="addPlayer()">Legg til spiller</button>
+            <button onclick="startGame()">Start spill</button>
+        </div>
+
+        <div id="scoreboard" class="hidden">
+            <!-- Scoreboard will be populated with JavaScript -->
+        </div>
+
+        <!-- ... -->
+
+<!-- Modal for 501 -->
+<div id="modal-501" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-501')">&times;</span>
+        <h2>501 Regler</h2>
+        <p>Start med 501 poeng. Målet er å redusere poengene til 0 først. Du må avslutte med en dobbel.</p>
+    </div>
+</div>
+
+<!-- Modal for 301 -->
+<div id="modal-301" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-301')">&times;</span>
+        <h2>301 Regler</h2>
+        <p>Start med 301 poeng. Målet er å redusere poengene til 0 først. Du må avslutte med en dobbel.</p>
+    </div>
+</div>
+
+<!-- Modal for Around the Clock -->
+<div id="modal-around-the-clock" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-around-the-clock')">&times;</span>
+        <h2>Around the Clock Regler</h2>
+        <p>Treff alle tallene på dartskiven i rekkefølge, fra 1 til 20. Etter 20, treff bullseye for å vinne.</p>
+    </div>
+</div>
+
+<!-- ... -->
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
